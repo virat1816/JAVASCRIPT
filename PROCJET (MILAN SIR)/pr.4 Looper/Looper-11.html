@@ -1,0 +1,23 @@
+<script>
+    var d = parseInt(prompt("Enter number that you are willing to check if it's prime or not:"));
+    if(d==1){
+        document.write("<h2>1 can only be divided by one number, 1 itself, that's why 1 is not a prime number.</h2>");
+    }
+    else if(d>1){
+        var prime = true;
+        for(var i=2;i<d;i++){
+            if (d % i == 0) {
+            prime = false;
+            }
+        }
+        if(prime){
+            document.write("<h2>Entered number is prime: "+d+"</h2>");
+        }
+        else{
+            document.write("<h2>Entered number is not prime.</h2>");
+        }
+    }
+    else{
+            document.write("<h2>Entered number is not prime.</h2>");
+    }
+</script>

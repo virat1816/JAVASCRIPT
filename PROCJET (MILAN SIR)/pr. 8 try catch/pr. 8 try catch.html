@@ -1,0 +1,255 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row pt-5 pb-5">
+        <div class="col-md-1">
+            <button onclick="viewAllRecord()" class="btn btn-primary">All</button>
+        </div>
+        <div class="col-md-1">
+            <button onclick="phoneData()" class="btn btn-primary">phone</button>
+        </div>
+        <div class="col-md-1">
+            <button onclick="laptopData()" class="btn btn-primary">laptop</button>
+        </div>
+        <div class="col-md-1">
+            <button onclick="aribudsData()" class="btn btn-primary">aribuds</button>
+        </div>
+        <div class="col-md-1">
+            <button onclick="WatchData()" class="btn btn-primary">Watch</button>
+        </div>
+    </div>
+
+    <div class="row" id="allrecord">
+        
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+let data = [
+        {
+            name : "vivo",
+            price : 15000,
+            image : "https://economictimes.indiatimes.com/thumb/msid-98990748,width-1777,height-1000,resizemode-4,imgsize-25464/vivo-mobile-phone-review.jpg?from=mdr",
+            category : "Phone"
+        },
+        {
+            name : "one plus",
+            price : 20000,
+            image : "https://i.insider.com/5d93a5642e22af45ae7ae452?width=1136&format=jpeg",
+            category : "Phone"
+        },
+        {
+            name : "apple",
+            price : 15000,
+            image : "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.landing-big_2x.jpg",
+            category : "Phone"
+        },
+        {
+            name : "Samsung",
+            price : 20000,
+            image : "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2020/05/S22_Ultra_Banner_3000x2000-scaled.jpg?ssl=1&quality=80&w=f",
+            category : "Phone"
+        },
+        {
+            name : "hp",
+            price : 25000,
+            image : "https://5.imimg.com/data5/YH/KT/MY-15358212/hp-laptop-500x500.jpg",
+            category : "Laptop"
+        },
+        {
+            name : "dell",
+            price : 15000,
+            image : "https://5.imimg.com/data5/IZ/WE/TV/SELLER-76766217/dell-laptop-500x500.jpg",
+            category : "Laptop"
+        },
+        {
+            name : "apple",
+            price : 25000,
+            image : "https://4.imimg.com/data4/SJ/BA/MY-3018414/apple-laptop-500x500.jpg",
+            category : "Laptop"
+        },
+        {
+            name : "asus",
+            price : 17000,
+            image : "https://5.imimg.com/data5/EE/PU/MY-1493139/asus-laptop-500x500.jpg",
+            category : "Laptop"
+        },
+        {
+            name : "Boat",
+            price : 3000,
+            image : "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD192-FI_Black01-removebg-preview.png?v=1675188376",
+            category : "Aribuds"
+        },
+        {
+            name : "apple",
+            price : 12000,
+            image : "https://techcrunch.com/wp-content/uploads/2022/09/Apple-AirPods-Pro-2nd-gen-Apple-Watch-charger-220907.jpg",
+            category : "Aribuds"
+        },
+        {
+            name : "jbl",
+            price : 3000,
+            image : "https://5.imimg.com/data5/IOS/Default/2022/6/UE/UV/GR/25796055/product-jpeg-1000x1000.png",
+            category : "Aribuds"
+        },
+        {
+            name : "one plus",
+            price : 3000,
+            image : "https://www.mytrendyphone.co.uk/images/Genuine-OnePlus-Buds-Pro-2-TWS-Earphones-Charging-Case-Obsidian-Black-6921815623045-01032023-01-p.webp",
+            category : "Aribuds"
+        },
+        {
+            name : "apple",
+            price : 3000,
+            image : "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MKU83_VW_34FR+watch-41-alum-midnight-nc-8s_VW_34FR_WF_CO_GEO_IN?wid=750&hei=712&trim=1%2C0&fmt=p-jpg&qlt=95&.v=1632171038000%2C1661971867159",
+            category : "Watch"
+        },
+        {
+            name : "Samsung",
+            price : 3000,
+            image : "https://m.media-amazon.com/images/I/610FsSvKMhL._SL1500_.jpg",
+            category : "Watch"
+        }, {
+            name : "noise",
+            price : 3000,
+            image : "https://m.media-amazon.com/images/I/61u2dhY-JBL._AC_SS450_.jpg",
+            category : "Watch"
+        }, {
+            name : "fossil",
+            price : 3000,
+            image : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1612425589/Croma%20Assets/Wearable/Wearable%20Devices/Images/232439_yuqbu5.png/mxw_640,f_auto",
+            category : "Watch"
+        },
+        
+  ];
+
+
+    viewAllRecord();
+    function viewAllRecord()
+    {
+        let tbl = "";
+        data.map((val)=>{
+            tbl += `
+                <div class="col-md-4 pb-4">
+                    <div class="card">
+                        <img src="${val.image}" style="height:300px;object-fit:cover" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">${val.name}</h5>
+                        <p class="card-text">${val.category}</p>
+                        <a href="#" class="btn btn-primary">Order</a>
+                        </div>
+                    </div>
+                </div>
+            `
+        })
+
+        document.getElementById('allrecord').innerHTML = tbl;
+    }
+
+    function phoneData(){
+        let category = "Phone";
+        let tbl = "";
+        data.map((val)=>{
+
+            if(val.category == category)
+            {
+                tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.image}" style="height:300px;object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.name}</h5>
+                            <p class="card-text">${val.category}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+            
+        })
+        document.getElementById('allrecord').innerHTML = tbl;
+    }
+
+    function laptopData(){
+        let category = "Laptop";
+        let tbl = "";
+        data.map((val)=>{
+
+            if(val.category == category)
+            {
+                tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.image}" style="height:300px;object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.name}</h5>
+                            <p class="card-text">${val.category}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+            
+        })
+        document.getElementById('allrecord').innerHTML = tbl;
+    }
+
+    function aribudsData(){
+        let category = "Aribuds";
+        let tbl = "";
+        data.map((val)=>{
+
+            if(val.category == category)
+            {
+                tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.image}" style="height:300px;object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.name}</h5>
+                            <p class="card-text">${val.category}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+            
+        })
+        document.getElementById('allrecord').innerHTML = tbl;
+    }
+
+    function WatchData(){
+        let category = "Watch";
+        let tbl = "";
+        data.map((val)=>{
+
+            if(val.category == category)
+            {
+                tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.image}" style="height300px;object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.name}</h5>
+                            <p class="card-text">${val.category}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+            
+        })
+        document.getElementById('allrecord').innerHTML = tbl;
+    }
+
+    
+
+
+</script>

@@ -1,0 +1,12 @@
+<script>
+    var d = parseInt(prompt("Enter number for which you are willing to find factorial:"));
+    var fac=1;
+    function factorial(d2){
+        for(var i=1;i<d2;i++)
+        {
+            fac+=fac*i;
+        }
+        document.write("<h2>Factorial for "+d+" is: "+fac+"</h2>");
+    }
+    factorial(d);
+</script>

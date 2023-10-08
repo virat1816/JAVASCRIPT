@@ -1,0 +1,13 @@
+<script>
+    var total = parseInt(prompt("Enter number of members you want in Fibonacci series:"));
+    var no1 = 0;
+    var no2 = 1;
+    document.write(no1 + ", " + no2);
+    for(var i=3; i<=total; i++) {
+        var nextno = no1 + no2;
+        document.write(", " + nextno);
+        no1 = no2;
+        no2 = nextno;
+    }
+    </script>
+    

@@ -1,0 +1,71 @@
+<h1 id="age"></h1>
+
+    <script type="text/javascript">
+      //using simple function
+
+      function eligible(){
+
+      var a= parseInt(prompt("Enter number"));
+
+      if(a>=18){
+          document.getElementById("age").innerHTML= "You are eligible for voting.";
+      }
+      else if(a<18){
+          document.getElementById("age").innerHTML= "You are not eligible to vote.";
+      }
+      else{
+          document.getElementById("age").innerHTML= "You enter invalid input.";
+      }
+      }
+      eligible();
+
+      //using no return with parameter function
+
+      // function eligible(x){
+      // if(a>=18){
+      //     document.getElementById("age").innerHTML= "You are eligible for voting.";
+      // }
+      // else if(a<18){
+      //     document.getElementById("age").innerHTML= "You are not eligible to vote.";
+      // }
+      // else{
+      //     document.getElementById("age").innerHTML= "You enter invalid input.";
+      // }
+      // }
+      // var a= parseInt(prompt("Enter number"));
+      // eligible(a);
+
+      //return with no parameter
+
+      //     function eligible(){
+      //     var a= parseInt(prompt("Enter number"));
+
+      //     if(a>=18){
+      //       return  "You are eligible for voting.";
+      //     }
+      //     else if(a<18){
+      //        return "You are not eligible to vote.";
+      //     }
+      //     else{
+      //         return "You enter invalid input.";
+      //     }
+      //     }
+      //    var ans= eligible();
+      //    document.getElementById("age").innerHTML= ans;
+
+      //return with parameter
+    //   function eligible(x) {
+    //     if (a >= 18) {
+    //       return "You are eligible for voting.";
+    //     } else if (a < 18) {
+    //       return "You are not eligible to vote.";
+    //     } else {
+    //       return "You enter invalid input.";
+    //     }
+    //   }
+    //   var a = parseInt(prompt("Enter number"));
+    //   var ans = eligible(a);
+    //   document.getElementById("age").innerHTML = ans;
+
+
+    </script>

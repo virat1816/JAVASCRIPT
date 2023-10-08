@@ -1,0 +1,33 @@
+<h1 id="calculate"></h1>
+
+    <script type="text/javascript">
+      function calculator(){
+        var a = parseInt(prompt("Enter First number"));
+        var b = parseInt(prompt("Enter Second number"));
+        var c = prompt("Enter operator");
+        var result;
+
+        switch (c) {
+          case "+":
+            result = a + b;
+            document.getElementById("calculate").innerHTML ="Addition of two number :  " + a + " + " + b + " = " + result;
+            break;
+          case "-":
+            result = a - b;
+            document.getElementById("calculate").innerHTML ="Subtraction of two number :  " + a + " - " + b + " = " + result;
+            break;
+          case "*":
+            result = a * b;
+            document.getElementById("calculate").innerHTML ="Multiplication of two number :  " + a + " * " + b + " = " + result;
+            break;
+          case "/":
+            result = a / b;
+            document.getElementById("calculate").innerHTML ="Division of two number :  " + a + " / " + b + " = " + result;
+            break;
+          default:
+            document.getElementById("calculate").innerHTML = "Invaid operator";
+            break;
+        }
+      }
+      calculator();
+    </script>

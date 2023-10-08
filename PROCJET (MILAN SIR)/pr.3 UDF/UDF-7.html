@@ -1,0 +1,23 @@
+    <h1 id="add"></h1>
+    <h1 id="sub"></h1>
+    <h1 id="mul"></h1>
+    <h1 id="div"></h1>
+
+    <script type="text/javascript">
+        function demo(){
+            var a=parseInt(prompt("Enter number"));
+            var b=parseInt(prompt("Enter number"));
+            var addition,subtraction,multiplication,division;
+            addition=a+b;
+            subtraction=a-b;
+            multiplication=a*b;
+            division=a/b;
+            document.getElementById("add").innerHTML = a + " + " + b +" = "+ addition;
+            document.getElementById("sub").innerHTML = a + " - " + b +" = "+ subtraction;
+            document.getElementById("mul").innerHTML = a + " * " + b +" = "+ multiplication;
+            document.getElementById("div").innerHTML = a + " / " + b +" = "+ division;
+        }
+        
+        demo();
+        
+    </script>

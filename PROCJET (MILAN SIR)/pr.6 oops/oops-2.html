@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data oops-2</title>
+</head>
+<body>
+    <table border="7">
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+        </tr>
+        <tbody id="records"></tbody>
+    </table>
+    <script type="text/javascript">
+
+let data = [
+    {
+        name : "jay",
+        email : "jay@gmail.com",
+        phone : "12345",
+    },
+    {
+        name : "ajay",
+        email : "ajay@gmail.com",
+        phone : "12345",
+    },
+    {
+        name : "vijay",
+        email : "vijay@gmail.com",
+        phone : "12345",
+    },
+    {
+        name : "ashish",
+        email : "ashish@gmail.com",
+        phone : "12345",
+    },
+];
+console.log(data);
+let tbl = "";
+data.forEach((get)=>{
+            tbl += `
+                    <tr>
+                    <td>${get.name}</td>
+                    <td>${get.email}</td>
+                    <td>${get.phone}</td>
+                    </tr>
+                    `
+        });
+        document.getElementById('records').innerHTML = tbl;
+    </script>
+</body>
+</html>

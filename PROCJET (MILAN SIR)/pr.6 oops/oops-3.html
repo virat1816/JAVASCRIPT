@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication table oops-3</title>
+</head>
+<body>
+    <table align="center">
+    <form action="">
+        <tr><td><label for="">Enter number</label></td></tr>
+        <tr><td><input type="number" id="input"/></tr></td>
+        <tr><td><button onclick="run()">Click here</button></tr></td>
+    </form>
+</table>
+    <script type="text/javascript">
+    class Table{
+    constructor(){}
+    print(get){
+        let i=1;
+        do{
+            document.write("<h2>"+get+" x "+i+" = "+get*i+"</h2>");
+            i++;
+        }while(i<=10)
+    }
+}
+let newobj = new Table;
+    function run(){
+        let a = parseFloat(document.getElementById('input').value);
+        newobj.print(a);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate percentage oops-1</title>
+</head>
+<body>
+    <h1 align="center"> Enter your marks out of 100 </h1>
+    <table border="7" align="center">
+       <tr> <td><label for="">Physics:- </label></td></tr>
+       <tr> <td><input type="text" name="" id="physics"></td></tr>
+       <tr> <td><label for="">Chemistry:- </label></td></tr>
+       <tr> <td><input type="text" name="" id="chemistry"></td></tr>
+       <tr> <td><label for="">Biology:- </label></td></tr>
+       <tr> <td><input type="text" name="" id="biology"></td></tr>
+       <tr> <td><label for="">Mathematics:- </label></td></tr>
+       <tr> <td><input type="text" name="" id="maths"></td></tr>
+       <tr> <td><label for="">Computer:- </label></td></tr>
+       <tr> <td><input type="text" name="" id="computer"></td></tr>
+       <tr> <td><button type="submit" onclick="save()">click here to get your grade</button></td></tr>
+    </table>
+    <h2 id="grade" align="center"></h2>
+    <script type="text/javascript">
+    class Marks {
+        display(a1,a2,a3,a4,a5){
+            const sum = a1+a2+a3+a4+a5;
+            console.log(sum);
+            let final = sum/5;
+            if(final >=90){
+            document.getElementById('grade').innerHTML = "Your Grade is A.";
+            }
+            else if(final >=80){
+            document.getElementById('grade').innerHTML = "Your Grade is B.";
+            }
+            else if(final >=70){
+            document.getElementById('grade').innerHTML = "Your Grade is C.";
+            }
+            else if(final >=60){
+            document.getElementById('grade').innerHTML = "Your Grade is D.";
+            }
+            else if(final >=50){
+            document.getElementById('grade').innerHTML = "Your Grade is E.";
+            }
+            else{
+            document.getElementById('grade').innerHTML = "Your Grade is F.";
+            }
+    }
+}
+
+let newobj = new Marks;
+function save(){
+    const a = parseFloat(document.getElementById('physics').value);
+    const b = parseFloat(document.getElementById('chemistry').value);
+    const c = parseFloat(document.getElementById('biology').value);
+    const d = parseFloat(document.getElementById('maths').value);
+    const e = parseFloat(document.getElementById('computer').value);
+    newobj.display(a,b,c,d,e);
+}
+
+</script>
+</body>
+</html>

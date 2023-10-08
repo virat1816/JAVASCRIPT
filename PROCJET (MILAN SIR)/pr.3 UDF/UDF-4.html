@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+
+function find(num1, num2, num3, num4) {
+
+  if (num1 >= num2 && num1 >= num3 && num1 >= num4) {
+
+    console.log(num1 + " is the greter number.");
+  }
+   else if (num2 >= num1 && num2 >= num3 && num2 >= num4) {
+    console.log(num2 + " is the greter number.");
+  } 
+  else if (num3 >= num1 && num3 >= num2 && num3 >= num4) {
+    console.log(num3 + " is the greter number.");
+  } 
+  else {
+    console.log(num4 + " is the greter number.");
+  }
+}
+
+
+var num1 = parseFloat(prompt("Enter first number:"));
+var num2 = parseFloat(prompt("Enter second number:"));
+var num3 = parseFloat(prompt("Enter third number:"));
+var num4 = parseFloat(prompt("Enter fourth number:"));
+
+find(num1, num2, num3, num4);
+
+
+</script>
